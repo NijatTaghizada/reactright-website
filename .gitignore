@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 .claude/
+
+# Logo drafts and LinkedIn assets
+brand/

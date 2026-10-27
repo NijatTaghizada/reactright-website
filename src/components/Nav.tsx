@@ -1,3 +1,5 @@
+import Logo from './Logo'
+
 const links = [
   ['about', 'About'],
   ['projects', 'Projects'],
@@ -8,7 +10,7 @@ export default function Nav() {
   return (
     <nav className="nav">
       <a href="#top" className="logo">
-        <span className="logo-dot" aria-hidden="true" />
+        <Logo className="logo-mark" />
         React Right
       </a>
       <div className="nav-links">

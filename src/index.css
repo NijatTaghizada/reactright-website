@@ -44,7 +44,7 @@ h2 { font-size: clamp(30px, 5vw, 44px); }
   border-bottom: 1px solid var(--line);
 }
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; letter-spacing: -0.01em; }
-.logo-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ember); }
+.logo-mark { width: 28px; height: 28px; }
 .nav-links { display: flex; gap: clamp(16px, 3vw, 32px); }
 .nav-links a { color: var(--muted); transition: color 0.2s; }
 .nav-links a:hover { color: var(--text); }

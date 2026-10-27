@@ -16,8 +16,8 @@ export default function About() {
         </p>
         <p>
           We’re not experts. We’re students figuring things out as we go, and
-          so far that’s meant one robot prototype and some research. We’re
-          sharing it here as we keep working on it.
+          so far that’s meant one robot prototype and two wildfire studies. We’re
+          sharing them here as we keep working.
         </p>
       </Reveal>
     </section>

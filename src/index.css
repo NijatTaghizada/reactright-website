@@ -88,11 +88,16 @@ h2 { font-size: clamp(30px, 5vw, 44px); }
   transition: border-color 0.25s;
 }
 .card:hover { border-color: var(--line-strong); }
-.card-link {
-  align-self: flex-start; margin-top: 24px; padding-top: 18px; width: 100%;
-  border-top: 1px solid var(--line); color: var(--text); transition: color 0.2s;
+.card-note {
+  margin: 0 0 24px; padding-left: 14px; border-left: 2px solid var(--ember);
+  color: var(--text); font-size: 15px;
 }
-.card-link:hover { color: var(--ember); }
+.card-links {
+  display: flex; flex-wrap: wrap; gap: 8px 24px;
+  margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line);
+}
+.card-links a { transition: color 0.2s; }
+.card-links a:hover { color: var(--ember); }
 .card-tag { color: var(--ember); margin: 0 0 14px; }
 .card h3 { font-size: 26px; }
 .card-body { color: var(--muted); margin: 14px 0 24px; flex: 1; }

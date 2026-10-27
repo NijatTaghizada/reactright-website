@@ -5,15 +5,20 @@ const projects = [
     tag: 'Early-stage prototype',
     title: 'Snake robot',
     body: 'A segmented, snake-like robot meant to move through tight or unstable spaces, like collapsed buildings, where people and wheeled robots can’t easily get in. It’s an early-stage prototype: a proof of concept we built to learn from, not a finished rescue tool.',
+    note: null,
     tags: ['Robotics', 'Search & rescue'],
-    link: null,
+    links: [],
   },
   {
-    tag: 'Research · ISEF 2025',
-    title: 'Wildfire Predictiveness With Explainable AI',
-    body: 'A machine-learning study on estimating wildfire risk from NASA satellite data, using XGBoost and TabNet models and SHAP to explain what drives each prediction. Co-authored by Nijat Taghizada, presented at Regeneron ISEF 2025 and published at ISPEC.',
-    tags: ['Machine learning', 'Wildfires'],
-    link: { href: 'https://isef.net/project/soft031t-wildfire-predictiveness-with-explainable-ai', label: 'View the ISEF project' },
+    tag: 'Research · 2026',
+    title: 'Wildfire Severity Prediction',
+    body: 'When a satellite first spots a new fire in California, can we tell whether it will grow past 1,000 acres? We matched 5,565 fires from 2012–2024 to NASA satellite detections and added weather, fuel and terrain data. For fires that still looked small at first, that context made predictions much better than the satellite signal alone.',
+    note: 'A follow-up to our ISEF project, Wildfire Predictiveness With Explainable AI, which won a Grand Award at Regeneron ISEF 2025.',
+    tags: ['Machine learning', 'Wildfires', 'SHAP'],
+    links: [
+      { href: 'https://github.com/NijatTaghizada/wildfire-severity-prediction', label: 'Code on GitHub' },
+      { href: 'https://isef.net/project/soft031t-wildfire-predictiveness-with-explainable-ai', label: 'ISEF project' },
+    ],
   },
 ]
 
@@ -30,13 +35,18 @@ export default function Projects() {
             <p className="card-tag mono">{p.tag}</p>
             <h3>{p.title}</h3>
             <p className="card-body">{p.body}</p>
+            {p.note && <p className="card-note">{p.note}</p>}
             <ul className="chips">
               {p.tags.map(t => <li key={t} className="mono">{t}</li>)}
             </ul>
-            {p.link && (
-              <a className="card-link mono" href={p.link.href} target="_blank" rel="noreferrer">
-                {p.link.label} <span aria-hidden="true">↗</span>
-              </a>
+            {p.links.length > 0 && (
+              <div className="card-links">
+                {p.links.map(l => (
+                  <a key={l.href} className="mono" href={l.href} target="_blank" rel="noreferrer">
+                    {l.label} <span aria-hidden="true">↗</span>
+                  </a>
+                ))}
+              </div>
             )}
           </Reveal>
         ))}

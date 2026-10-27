@@ -11,7 +11,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        Student-led · Since 2024
+        Early-stage startup · Baku · Since 2024
       </motion.p>
       <motion.h1
         initial={{ opacity: 0, y: 24 }}
@@ -26,8 +26,8 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.25, ease }}
       >
-        We’re a small team of students experimenting with robotics and data
-        for natural disasters. Still early, still learning.
+        React Right is a small startup working on robotics and data for
+        natural disasters. We’re early, and still learning.
       </motion.p>
 
       <motion.a

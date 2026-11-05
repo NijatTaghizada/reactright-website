@@ -23,17 +23,19 @@ export default function Projects() {
         <div className="section-head"><h2>What we’ve worked on</h2></div>
         <div className="projects">
           {projects.map(p => (
-            <article key={p.title} className="project glass">
+            <article key={p.title} className="project">
               <h3>{p.title}</h3>
-              <p>{p.body}</p>
-              {p.note && <p>{p.note}</p>}
-              {p.links.length > 0 && (
-                <div className="project-links">
-                  {p.links.map(l => (
-                    <a key={l.href} href={l.href} target="_blank" rel="noreferrer">{l.label}</a>
-                  ))}
-                </div>
-              )}
+              <div>
+                <p>{p.body}</p>
+                {p.note && <p>{p.note}</p>}
+                {p.links.length > 0 && (
+                  <div className="project-links">
+                    {p.links.map(l => (
+                      <a key={l.href} href={l.href} target="_blank" rel="noreferrer">{l.label}</a>
+                    ))}
+                  </div>
+                )}
+              </div>
             </article>
           ))}
         </div>

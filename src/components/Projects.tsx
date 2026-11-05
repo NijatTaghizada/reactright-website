@@ -18,12 +18,12 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="projects-band" id="projects">
+    <section className="projects-band glow" id="projects">
       <div className="section container">
-        <h2>What we’ve worked on</h2>
+        <div className="section-head"><h2>What we’ve worked on</h2></div>
         <div className="projects">
           {projects.map(p => (
-            <article key={p.title} className="project">
+            <article key={p.title} className="project glass">
               <h3>{p.title}</h3>
               <p>{p.body}</p>
               {p.note && <p>{p.note}</p>}

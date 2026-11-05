@@ -2,7 +2,7 @@ import { motion } from 'motion/react'
 
 export default function Hero() {
   return (
-    <header className="hero" id="top">
+    <header className="hero glow" id="top">
       <div className="container hero-top">
         <div className="hero-stats">
           <div className="stat"><b>2024</b><span>Founded</span></div>
@@ -23,7 +23,7 @@ export default function Hero() {
       </div>
 
       <div className="container hero-cards">
-        <a href="#projects" className="hero-card">
+        <a href="#projects" className="hero-card glass">
           <h3>Snake robot</h3>
           <p>Early-stage prototype</p>
           <svg viewBox="0 0 600 80" fill="none" aria-hidden="true">
@@ -44,11 +44,11 @@ export default function Hero() {
             />
           </svg>
         </a>
-        <a href="#projects" className="hero-card">
+        <a href="#projects" className="hero-card glass">
           <h3>Wildfire Severity Prediction</h3>
           <p>When a satellite spots a new fire, will it grow past 1,000 acres?</p>
         </a>
-        <a href="#projects" className="hero-card">
+        <a href="#projects" className="hero-card glass">
           <h3>Grand Award, Regeneron ISEF 2025</h3>
           <p>Wildfire Predictiveness With Explainable AI</p>
         </a>

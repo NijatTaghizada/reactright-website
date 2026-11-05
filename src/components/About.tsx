@@ -1,8 +1,8 @@
 export default function About() {
   return (
-    <section className="cream" id="about">
-      <div className="section container about">
-        <h2>How it started</h2>
+    <section id="about">
+      <div className="section container">
+        <div className="section-head"><h2>How it started</h2></div>
         <div className="about-text">
           <p>
             React Right started in 2024. We kept noticing how

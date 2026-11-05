@@ -1,44 +1,15 @@
 import { motion } from 'motion/react'
 
-const ease = [0.16, 1, 0.3, 1] as const
-
 export default function Hero() {
   return (
     <header className="hero container" id="top">
-      <motion.p
-        className="label mono"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        Early-stage startup · Baku · Since 2024
-      </motion.p>
-      <motion.h1
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.1, ease }}
-      >
-        Trying to build tech that helps when disasters hit.
-      </motion.h1>
-      <motion.p
-        className="hero-sub"
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.25, ease }}
-      >
-        React Right is a small startup working on robotics and data for
-        natural disasters. We’re early, and still learning.
-      </motion.p>
+      <h1>Trying to build tech that helps when disasters hit.</h1>
+      <p className="hero-sub">
+        React Right is a small startup in Stanford, California, working on
+        robotics and data for natural disasters. We’re early, and still learning.
+      </p>
 
-      <motion.a
-        href="#projects"
-        className="hero-cta mono"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-      >
-        See what we’ve built ↓
-      </motion.a>
+      <a href="#projects" className="hero-cta">See what we’ve built</a>
 
       <svg className="hero-snake" viewBox="0 0 600 80" fill="none" aria-hidden="true">
         <motion.path
@@ -51,7 +22,7 @@ export default function Hero() {
           transition={{ duration: 1.8, delay: 0.4, ease: 'easeInOut' }}
         />
         <motion.circle
-          cx="568" cy="36" r="8" fill="var(--text)"
+          cx="568" cy="36" r="8" fill="var(--ink)"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, delay: 2.1 }}

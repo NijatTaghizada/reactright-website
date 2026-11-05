@@ -15,7 +15,7 @@ export default function Nav() {
       </a>
       <div className="nav-links">
         {links.map(([id, label]) => (
-          <a key={id} href={`#${id}`} className="mono">{label}</a>
+          <a key={id} href={`#${id}`}>{label}</a>
         ))}
       </div>
     </nav>

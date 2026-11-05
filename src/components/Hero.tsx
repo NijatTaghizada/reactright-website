@@ -9,12 +9,12 @@ export default function Hero() {
         robotics and data for natural disasters. We’re early, and still learning.
       </p>
 
-      <a href="#projects" className="hero-cta">See what we’ve built</a>
+      <a href="#projects" className="btn">See what we’ve built</a>
 
       <svg className="hero-snake" viewBox="0 0 600 80" fill="none" aria-hidden="true">
         <motion.path
           d="M10 50 C 60 10, 100 10, 150 45 S 240 80, 290 45 S 380 10, 430 45 S 520 75, 560 40"
-          stroke="var(--ember)"
+          stroke="var(--ink)"
           strokeWidth="6"
           strokeLinecap="round"
           initial={{ pathLength: 0 }}

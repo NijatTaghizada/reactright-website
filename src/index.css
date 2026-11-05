@@ -1,10 +1,11 @@
-/* 60% cream, 30% ink, 10% ember */
+/* Cream and ink do the work. Cobalt only goes on buttons. Ember only appears in the logo. */
 :root {
   --cream: #f4efe6;
-  --ink: #1c1714;
+  --ink: #3a150c;
+  --cobalt: #2447f9;
   --ember: #ff5a1f;
-  --line: rgba(28, 23, 20, 0.14);
-  --muted: rgba(28, 23, 20, 0.72);
+  --line: rgba(58, 21, 12, 0.14);
+  --muted: rgba(58, 21, 12, 0.76);
   --muted-on-ink: rgba(244, 239, 230, 0.74);
   --sans: 'Geist', system-ui, sans-serif;
   --gutter: clamp(16px, 4vw, 48px);
@@ -23,7 +24,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-::selection { background: var(--ember); color: var(--ink); }
+::selection { background: var(--ink); color: var(--cream); }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
 h2 { font-size: clamp(30px, 5vw, 44px); }
@@ -55,13 +56,15 @@ h2 { font-size: clamp(30px, 5vw, 44px); }
 }
 .hero h1 { font-size: clamp(40px, 8vw, 84px); max-width: 14ch; }
 .hero-sub { color: var(--muted); font-size: clamp(17px, 2vw, 20px); max-width: 46ch; margin: 24px 0 0; }
-.hero-cta {
-  align-self: flex-start; margin-top: 32px;
-  background: var(--ember); border-radius: 6px; padding: 12px 20px;
-  font-weight: 500;
-  transition: background-color 0.2s, color 0.2s;
+.btn {
+  display: inline-block;
+  background: var(--cobalt); color: var(--cream);
+  border-radius: 6px; padding: 12px 20px;
+  font-weight: 500; overflow-wrap: anywhere;
+  transition: background-color 0.2s;
 }
-.hero-cta:hover { background: var(--ink); color: var(--cream); }
+.btn:hover { background: var(--ink); }
+.hero .btn { align-self: flex-start; margin-top: 32px; }
 .hero-snake { width: min(560px, 100%); height: auto; margin-top: 56px; }
 
 /* ---------- About ---------- */
@@ -77,20 +80,12 @@ h2 { font-size: clamp(30px, 5vw, 44px); }
 .project h3 { font-size: 26px; }
 .project p { color: var(--muted-on-ink); margin: 14px 0 0; }
 .project-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 20px; }
-.project-links a { text-decoration: underline; text-decoration-color: var(--ember); text-decoration-thickness: 2px; text-underline-offset: 4px; transition: color 0.2s; }
-.project-links a:hover { color: var(--ember); }
+.project-links a { text-decoration: underline; text-underline-offset: 4px; }
+.project-links a:hover { text-decoration: none; }
 @media (max-width: 760px) { .projects { grid-template-columns: 1fr; } }
 
 /* ---------- Contact ---------- */
-.contact { background: var(--ember); }
-.contact .section { padding-top: clamp(32px, 4vw, 44px); padding-bottom: clamp(32px, 4vw, 44px); }
-.contact-sub { margin: 12px 0 18px; max-width: 44ch; }
-.contact-email {
-  font-size: clamp(20px, 4vw, 32px); font-weight: 500; letter-spacing: -0.02em;
-  border-bottom: 2px solid var(--ink); padding-bottom: 4px;
-  overflow-wrap: anywhere;
-}
-.contact-email:hover { border-bottom-color: transparent; }
+.contact-sub { color: var(--muted); margin: 12px 0 24px; max-width: 44ch; }
 .footer-bar { background: var(--ink); color: var(--muted-on-ink); font-size: 14px; }
 .footer-bar .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding-top: 24px; padding-bottom: 24px; }
 

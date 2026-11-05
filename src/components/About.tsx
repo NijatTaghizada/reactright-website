@@ -12,7 +12,8 @@ export default function About() {
           </p>
           <p>
             We’re an early-stage startup based in Stanford and Baku.
-            So far we’ve built one robot prototype and done two wildfire studies.
+            So far that’s two wildfire studies using data and machine learning,
+            plus one early robot prototype.
           </p>
         </div>
       </div>
